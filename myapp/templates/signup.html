@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+
+<div class="X">
+
+        <h1>회원가입</h1>
+
+        <form method="POST" class="s4" action="{% url 'signup' %}">
+
+            {% csrf_token %}
+
+            <input type="email" name="username" id="name" maxlength="50" placeholder="이메일 주소"><br>
+
+            <input type="password" name="password1" id="name" maxlength="14" placeholder="비밀번호"><br>
+
+            <input type="password" name="password2" id="name" maxlength="14" placeholder="비밀번호 확인"><br>
+
+            <input type="submit" value="회원가입" />
+
+        </form>
+
+    </div>
+
+{% endblock %}

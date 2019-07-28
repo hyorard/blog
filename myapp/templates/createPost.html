@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div id="div_new">
+        <form action="{% url 'createPost' %}" method='POST'>
+            {% csrf_token %}
+            <h4>제목</h4>
+            <input type="text" id="write_title" name="title">
+            <br>
+            <h4>내용</h4>
+            <textarea id="write_body" cols="40" rows="10" name="body" maxlength="2000"></textarea><br><br>
+            <input type="submit" class="btn btn-outline-success" value="제출하기">
+        </form>
+
+    </div>
+
+{% endblock %}

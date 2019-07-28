@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+{% for post in posts.all %}
+<div class="post">
+    <div class="section">
+        <h1>{{post.title}}</h1>
+    <p>{{post.body}}</p>
+    <a href="{% url 'delete' post.title%}" class="readmore">삭제</a>
+    </div>
+</div>
+{%endfor%}
+
+{% endblock %}
